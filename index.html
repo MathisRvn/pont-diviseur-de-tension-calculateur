@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur pont diviseur de tension</title>
+</head>
+<body>
+    
+    <h1>Calculateur pont diviseur de tension</h1>
+
+    <br><br>
+
+    <img src="https://freesvg.org/img/VoltageDivider.png" alt="https://freesvg.org/img/VoltageDivider.png" width="500px">
+
+    <br><br>
+
+    <div>
+
+        <div>
+
+            <h2>Calculer Vout en fonction de Vin, r1 et r2</h2>
+
+            <span>Vout = Vin * R2 / (R1 + R2)</span>
+
+            <br><br>
+
+            <label for="1vin">Vin</label>
+            <input name="1vin" type="number">
+            <span>V</span>
+            <br>
+
+            <label for="1r1">R1</label>
+            <input name="1r1" type="number">
+            <span>ohms</span>
+            <br>
+
+            <label for="1r2">R2</label>
+            <input name="1r2" type="number">
+            <span>ohms</span>
+
+            <br><br>
+
+            <button onclick="compute1()">Calculer</button>
+
+            <br><br>
+
+            <span>Vout = <span id="compute1out"></span> V</span>
+
+        </div>
+
+        <br><br><br><br><br>
+
+        <div>
+
+            <h2>Calculer r1 et r2 en fonction de Vin et Vout</h2>
+
+            <span>R1 / R2 = (Vin / Vout) - 1</span>
+
+            <br><br>
+
+            <label for="2vin">Vin</label>
+            <input name="2vin" type="number">
+            <span>V</span>
+            <br>
+
+            <label for="2vout">Vout</label>
+            <input name="2vout" type="number">
+            <span>V</span>
+            <br>
+
+            <br><br>
+
+            <button onclick="compute2()">Calculer</button>
+
+            <br><br>
+
+            <span>Pour toute résistance R1 prendre une valeur de R1 tel que R2 = <span id="compute2out1">undefined</span> * R1</span>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
